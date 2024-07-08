@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TikTok_Server", "TikTok_Ser
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "business_logic", "business_logic\business_logic.csproj", "{A1DC5BB0-8F47-4761-8B69-E6DC2BC4F500}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "data_access", "data_access\data_access.csproj", "{760D8CB0-83B6-4524-91A0-DF7239760470}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{A1DC5BB0-8F47-4761-8B69-E6DC2BC4F500}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1DC5BB0-8F47-4761-8B69-E6DC2BC4F500}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1DC5BB0-8F47-4761-8B69-E6DC2BC4F500}.Release|Any CPU.Build.0 = Release|Any CPU
+		{760D8CB0-83B6-4524-91A0-DF7239760470}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{760D8CB0-83B6-4524-91A0-DF7239760470}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{760D8CB0-83B6-4524-91A0-DF7239760470}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{760D8CB0-83B6-4524-91A0-DF7239760470}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

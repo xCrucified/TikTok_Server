@@ -14,12 +14,6 @@ namespace Bussiness_Logic.Entities
         public User User { get; set; }
         public int VideoId { get; set; }
 
-
-
-
-
-
-
         public Video Video { get; set; }
     }
 }

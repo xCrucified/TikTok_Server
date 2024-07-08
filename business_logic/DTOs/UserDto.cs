@@ -1,14 +1,13 @@
-﻿using business_logic.Entities;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bussiness_Logic.Entities
+namespace business_logic.DTOs
 {
-    public class User : IdentityUser
+    public class UserDto : IdentityUser
     {
         public decimal Balance { get; set; }
         public string AvatarPicture { get; set; }
@@ -17,10 +16,5 @@ namespace Bussiness_Logic.Entities
         public int Followings { get; set; }
         public Boolean isFriend { get; set; }
         public string? Description { get; set; }
-        public IEnumerable<Video> Videos { get; set;}
-        public IEnumerable<Like> Likes { get; set;}
-        public IEnumerable<Comment> Comments { get; set;}
-        public ICollection<RefreshToken>? RefreshTokens { get; set; }
-
     }
 }
