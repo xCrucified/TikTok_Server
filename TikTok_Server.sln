@@ -4,10 +4,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TikTok_Server", "TikTok_Server\TikTok_Server.csproj", "{BF610516-043E-462E-BE57-2FC96BC44B83}"
+	ProjectSection(ProjectDependencies) = postProject
+		{760D8CB0-83B6-4524-91A0-DF7239760470} = {760D8CB0-83B6-4524-91A0-DF7239760470}
+		{A1DC5BB0-8F47-4761-8B69-E6DC2BC4F500} = {A1DC5BB0-8F47-4761-8B69-E6DC2BC4F500}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "business_logic", "business_logic\business_logic.csproj", "{A1DC5BB0-8F47-4761-8B69-E6DC2BC4F500}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "business_logic", "business_logic\business_logic.csproj", "{A1DC5BB0-8F47-4761-8B69-E6DC2BC4F500}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "data_access", "data_access\data_access.csproj", "{760D8CB0-83B6-4524-91A0-DF7239760470}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "data_access", "data_access\data_access.csproj", "{760D8CB0-83B6-4524-91A0-DF7239760470}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

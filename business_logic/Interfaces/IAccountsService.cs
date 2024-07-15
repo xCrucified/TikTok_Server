@@ -13,6 +13,8 @@ namespace Bussiness_Logic.Interfaces
         Task<LoginResponseDto> Login(LoginModel model);
         Task Logout(string refreshToken);
         Task<UserTokens> RefreshTokens(UserTokens tokens);
+
+        Task RemoveExpiredRefreshTokens();
     }
 
     public class ResetToken

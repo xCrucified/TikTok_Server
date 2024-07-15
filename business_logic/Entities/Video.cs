@@ -11,7 +11,7 @@ namespace Bussiness_Logic.Entities
     {
         public int Id { get; set; }
         public string Title { get; set; }
-        public bool IsPrivate { get; set; }
+        public bool isPrivate { get; set; }
         public string VideoUrl {  get; set; }
         public int Views {  get; set; }
         public DateTime PublishDate { get; set; }
