@@ -2,5 +2,7 @@
 
 public interface ILikeService
 {
-
+    Task<IEnumerable<VideoDto>> Get(string userId);
+    void Add(CreateLikeModel likeModel);
+    Task Remove(string userId);
 }
