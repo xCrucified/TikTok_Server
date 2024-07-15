@@ -1,5 +1,5 @@
 ﻿using business_logic.Interfaces;
-using Bussiness_Logic.Entities;
+using business_logic.Entities;
 using data_access.data;
 using data_access.repository;
 using Microsoft.AspNetCore.Identity;

@@ -1,4 +1,7 @@
-﻿namespace business_logic.Services;
+﻿using business_logic.DTOs;
+using business_logic.Interfaces;
+
+namespace business_logic.Services;
 
 public class SaveService : ISaveService
 {

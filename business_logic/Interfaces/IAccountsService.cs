@@ -5,25 +5,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace business_logic.Interfaces
+namespace business_logic.Interfaces;
+
+public interface IAccountsService
 {
-    public interface IAccountsService
-    {
-        Task Register(RegisterModel model);
-        Task<LoginResponseDto> Login(LoginModel model);
-        Task Logout(string refreshToken);
-        Task<UserTokens> RefreshTokens(UserTokens tokens);
+    Task Register(RegisterModel model);
+    Task<LoginResponseDto> Login(LoginModel model);
+    Task Logout(string refreshToken);
+    Task<UserTokens> RefreshTokens(UserTokens tokens);
 
-        Task RemoveExpiredRefreshTokens();
+    Task RemoveExpiredRefreshTokens();
 
-    }
-    public class ResetToken
-    {
-        public string Token { get; set; }
-    }
-    public class ResetPasswordModel
-    {
-        public string? NewPassword { get; set; }
-        public string Token { get; set; }
-    }
 }
+public class ResetToken
+{
+    public string Token { get; set; }
+}
+public class ResetPasswordModel
+{
+    public string? NewPassword { get; set; }
+    public string Token { get; set; }
+}
+

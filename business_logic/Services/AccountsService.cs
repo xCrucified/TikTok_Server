@@ -5,6 +5,7 @@ using business_logic.DTOs;
 using Microsoft.AspNetCore.Identity;
 using System.Net;
 using business_logic;
+using business_logic.Specifications;
 
 namespace business_logic.Services;
 
@@ -62,8 +63,7 @@ public class AccountsService : IAccountsService
     {
         var refrestToken = await refreshTokenR.GetItemBySpec(new RefreshTokenSpecs.ByToken(userTokens.RefreshToken));
 
-        if (refrestToken == null)
-            throw new HttpException(Errors.InvalidToken, HttpStatusCode.BadRequest);
+        if (refrestToken == null) throw new HttpException(Errors.InvalidToken, HttpStatusCode.BadRequest);
 
         var claims = jwtService.GetClaimsFromExpiredToken(userTokens.AccessToken);
         var newAccessToken = jwtService.CreateToken(claims);
@@ -105,26 +105,8 @@ public class AccountsService : IAccountsService
         await signInManager.SignOutAsync();
     }
 
-    public Task Register(RegisterModel model)
-    {
-        throw new NotImplementedException();
-    }
-
-    public Task<LoginResponseDto> Login(LoginModel model)
-    {
-        throw new NotImplementedException();
-    }
-
-    public Task Logout(string refreshToken)
-    {
-        throw new NotImplementedException();
-    }
-
-    public Task<UserTokens> RefreshTokens(UserTokens tokens)
+    public Task RemoveExpiredRefreshTokens()
     {
         throw new NotImplementedException();
     }
 }
-
-// готовий код підставити вище
-

@@ -1,4 +1,4 @@
-﻿namespace business_logic.Interfaces;
+﻿using business_logic.DTOs;
 
 namespace business_logic.Interfaces
 {
