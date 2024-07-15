@@ -1,4 +1,4 @@
-﻿using Bussiness_Logic.DTOs;
+﻿using business_logic.DTOs;
 using FluentValidation;
 
 namespace Bussiness_Logic.Validators;

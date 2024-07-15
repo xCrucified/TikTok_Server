@@ -26,7 +26,7 @@ namespace business_logic
             services.AddScoped<IAccountsService, AccountsService>();
             services.AddScoped<IFileService, FileService>();
             services.AddScoped<IJwtService, JwtService>();
-            //services.AddScoped<IVideoService, VideoService>();
+            services.AddScoped<IVideoService, VideoService>();
             services.AddScoped<ICommentService, CommentService>();
             services.AddScoped<ILikeService, LikeService>();
             services.AddScoped<ISaveService, SaveService>();

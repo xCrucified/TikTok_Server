@@ -1,7 +1,7 @@
 ﻿using Ardalis.Specification;
-using Bussiness_Logic.Entities;
+using business_logic.Entities;
 
-namespace Bussiness_Logic.Specifications;
+namespace business_logic.Specifications;
 
 public static class LikeSpecs
 {

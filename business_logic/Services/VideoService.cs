@@ -1,6 +1,9 @@
-﻿namespace business_logic.Services
+﻿using business_logic.Interfaces;
+
+namespace business_logic.Services
 {
-    public static class VideoService
+    public class VideoService : IVideoService
     {
+
     }
 }
