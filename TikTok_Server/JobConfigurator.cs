@@ -1,4 +1,4 @@
-﻿using Bussiness_Logic.Interfaces;
+﻿using business_logic.Interfaces;
 using Hangfire;
 
 namespace TikTok_Server

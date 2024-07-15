@@ -1,8 +1,8 @@
 ﻿using System.Security.Claims;
-using Bussiness_Logic.Entities;
-using Bussiness_Logic.Interfaces;
+using business_logic.Entities;
+using business_logic.Interfaces;
 
-namespace Bussiness_Logic.Services;
+namespace business_logic.Services;
 
 public class JwtService: IJwtService
 {

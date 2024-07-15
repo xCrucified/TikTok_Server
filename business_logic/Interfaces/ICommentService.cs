@@ -1,4 +1,4 @@
-﻿namespace Bussiness_Logic.Interfaces;
+﻿namespace business_logic.Interfaces;
 
 public interface ICommentService
 {

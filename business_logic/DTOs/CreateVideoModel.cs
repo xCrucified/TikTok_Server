@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 
-namespace Bussiness_Logic.DTOs
+namespace business_logic.DTOs
 {
     public class CreateVideoModel
     {

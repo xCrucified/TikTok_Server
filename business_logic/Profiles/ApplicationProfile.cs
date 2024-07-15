@@ -1,14 +1,14 @@
 ﻿using AutoMapper;
-using Bussiness_Logic.DTOs;
-using Bussiness_Logic.Entities;
-using Bussiness_Logic.Interfaces;
+using business_logic.DTOs;
+using business_logic.Entities;
+using business_logic.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bussiness_Logic.Profiles
+namespace business_logic.Profiles
 {
     internal class ApplicationProfile : Profile
     {

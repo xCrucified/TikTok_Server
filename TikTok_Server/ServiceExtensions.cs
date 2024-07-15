@@ -1,4 +1,4 @@
-﻿using Bussiness_Logic.Helpers;
+﻿using business_logic.Helpers;
 using Hangfire;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;

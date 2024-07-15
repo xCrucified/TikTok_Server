@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
 using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
-using Bussiness_Logic.Interfaces;
-using Bussiness_Logic.Services;
+using business_logic.Interfaces;
+using business_logic.Services;
 
-namespace Bussiness_Logic
+namespace business_logic
 {
     public static class ServiceExtentions
     {
@@ -26,7 +26,7 @@ namespace Bussiness_Logic
             services.AddScoped<IAccountsService, AccountsService>();
             services.AddScoped<IFileService, FileService>();
             services.AddScoped<IJwtService, JwtService>();
-            services.AddScoped<IVideoService, VideoService>();
+            //services.AddScoped<IVideoService, VideoService>();
             services.AddScoped<ICommentService, CommentService>();
             services.AddScoped<ILikeService, LikeService>();
             services.AddScoped<ISaveService, SaveService>();

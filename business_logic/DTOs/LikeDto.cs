@@ -1,11 +1,11 @@
-﻿using Bussiness_Logic.Entities;
+﻿using business_logic.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bussiness_Logic.DTOs
+namespace business_logic.DTOs
 {
     public class LikeDto
     {   

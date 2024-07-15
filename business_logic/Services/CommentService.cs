@@ -1,6 +1,6 @@
-﻿using Bussiness_Logic.Interfaces;
+﻿using business_logic.Interfaces;
 
-namespace Bussiness_Logic.Services;
+namespace business_logic.Services;
 
 public class CommentService : ICommentService
 {

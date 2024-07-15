@@ -1,11 +1,11 @@
-﻿using Bussiness_Logic.DTOs;
+﻿using business_logic.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bussiness_Logic.Interfaces
+namespace business_logic.Interfaces
 {
     public interface IAccountsService
     {
@@ -15,8 +15,8 @@ namespace Bussiness_Logic.Interfaces
         Task<UserTokens> RefreshTokens(UserTokens tokens);
 
         Task RemoveExpiredRefreshTokens();
-    }
 
+    }
     public class ResetToken
     {
         public string Token { get; set; }

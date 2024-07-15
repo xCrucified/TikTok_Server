@@ -1,8 +1,8 @@
-﻿using Bussiness_Logic.Interfaces;
+﻿using business_logic.Interfaces;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 
-namespace Bussiness_Logic.Services;
+namespace business_logic.Services;
 
 public class FileService: IFileService
 {

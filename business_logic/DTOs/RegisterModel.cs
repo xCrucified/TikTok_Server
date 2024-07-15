@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bussiness_Logic.DTOs
+namespace business_logic.DTOs
 {
     public class RegisterModel
     {

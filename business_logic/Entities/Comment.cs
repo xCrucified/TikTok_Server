@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bussiness_Logic.Entities
+namespace business_logic.Entities
 {
     public class Comment
     {

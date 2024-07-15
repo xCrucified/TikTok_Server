@@ -1,4 +1,4 @@
-﻿using Bussiness_Logic.Entities;
+﻿using business_logic.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
