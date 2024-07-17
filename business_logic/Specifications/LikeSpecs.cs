@@ -7,7 +7,7 @@ public static class LikeSpecs
 {
     internal class ById : Specification<Like>
     {
-        public ById(int Id)
+        public ById(string Id)
         {
             Query.Where(x => x.Id == x.Id);
         }

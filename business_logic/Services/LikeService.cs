@@ -3,6 +3,7 @@ using business_logic.DTOs;
 using business_logic.Entities;
 using business_logic.Interfaces;
 using business_logic.Specifications;
+using System.Net;
 
 namespace business_logic.Services;
 
@@ -21,14 +22,17 @@ public class LikeService : ILikeService
         likeR.Insert(mapper.Map<Like>(likeModel));
         likeR.Save();
     }
-
-    public async Task<IEnumerable<LikeDto>> Get(string id)
+    async Task<IEnumerable<VideoDto>> ILikeService.Get(string userId)
     {
-        return mapper.Map<List<LikeDto>>(await likeR.GetListBySpec(new LikeSpecs.ById(Convert.ToInt32(id))));
+        return (IEnumerable<VideoDto>)mapper.Map<List<LikeDto>>(await likeR.GetListBySpec(new LikeSpecs.ById(userId)));
+    }
+    public async Task Remove(string userId)
+    {
+        if (userId == "") throw new HttpException(Errors.ItemNotFound, HttpStatusCode.BadRequest);
+
+        var video = likeR.GetById(userId) ?? throw new HttpException(Errors.ItemNotFound, HttpStatusCode.NotFound);
+        likeR.Delete(video);
+        likeR.Save();
     }
 
-    public Task Remove(string userId)
-    {
-        throw new NotImplementedException();
-    }
 }

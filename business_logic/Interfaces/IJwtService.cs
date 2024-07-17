@@ -14,5 +14,7 @@ namespace business_logic.Interfaces
         string CreateToken(IEnumerable<Claim> claims);
         string CreateRefreshToken();
         IEnumerable<Claim> GetClaimsFromExpiredToken(string token);
+        DateTime GetLastValidRefreshTokenDate();
+
     }
 }

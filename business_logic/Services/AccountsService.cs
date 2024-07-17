@@ -105,8 +105,15 @@ public class AccountsService : IAccountsService
         await signInManager.SignOutAsync();
     }
 
-    public Task RemoveExpiredRefreshTokens()
+    public async Task RemoveExpiredRefreshTokens()
     {
-        throw new NotImplementedException();
+        var lastDate = jwtService.GetLastValidRefreshTokenDate();
+        var expiredTokens = await refreshTokenR.GetListBySpec(new RefreshTokenSpecs.CreatedBy(lastDate));
+
+        foreach (var i in expiredTokens)
+        {
+            refreshTokenR.Delete(i);
+        }
+        refreshTokenR.Save();
     }
 }
