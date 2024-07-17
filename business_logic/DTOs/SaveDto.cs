@@ -12,5 +12,6 @@ namespace business_logic.DTOs
         public int Id { get; set; }
         public DateTime DateSave { get; set; }
         public string UserId { get; set; }
+        public int VideoId { get; set; }
     }
 }

@@ -1,38 +1,67 @@
-﻿using business_logic.DTOs;
+﻿using AutoMapper;
+using business_logic.DTOs;
+using business_logic.Entities;
 using business_logic.Interfaces;
+using business_logic.Specifications;
+using System.Net;
 
 namespace business_logic.Services
 {
     public class VideoService : IVideoService
     {
-        void IVideoService.Crete(CreateVideoModel videoModel)
+        private readonly IMapper mapper;
+        private readonly IRepository<Video> videoR;
+
+        public VideoService(IMapper mapper,
+                               IRepository<Video> videoR)
         {
-            throw new NotImplementedException();
+            this.mapper = mapper;
+            this.videoR = videoR;
+        }
+        void IVideoService.Create(CreateVideoModel videoModel)
+        {
+            videoR.Insert(mapper.Map<Video>(videoModel));
+            videoR.Save();
         }
 
-        Task IVideoService.Delete(int id)
+        async Task IVideoService.Delete(int id)
         {
-            throw new NotImplementedException(); 
+            if (id < 0) throw new HttpException(Errors.ItemNotFound, HttpStatusCode.BadRequest);
+
+            var video = videoR.GetById(id);
+
+            if (video == null) throw new HttpException(Errors.ItemNotFound, HttpStatusCode.NotFound);
+
+            videoR.Delete(video);
+            videoR.Save();
+        }
+        
+        async Task IVideoService.Edit(VideoDto videoDto)
+        {
+            videoR.Update(mapper.Map<Video>(videoDto));
+            videoR.Save();
         }
 
-        Task IVideoService.Edit(VideoDto videoDto)
+        async Task<IEnumerable<VideoDto>> IVideoService.Get(IEnumerable<int> ids)
         {
-            throw new NotImplementedException();
+            return mapper.Map<List<VideoDto>>(await videoR.GetListBySpec(new VideoSpecs.ByIds(ids)));
         }
 
-        Task<IEnumerable<VideoDto>> IVideoService.Get(IEnumerable<int> ids)
+        async Task<VideoDto> IVideoService.Get(int id)
         {
-            throw new NotImplementedException();
-        }
+            if (id < 0) throw new HttpException(Errors.ItemNotFound, HttpStatusCode.BadRequest);
 
-        Task<VideoDto> IVideoService.Get(int id)
-        {
-            throw new NotImplementedException();
+            var item = await videoR.GetItemBySpec(new VideoSpecs.ById(id));
+            if (item == null) throw new HttpException(Errors.ItemNotFound, HttpStatusCode.NotFound);
+
+            var dto = mapper.Map<VideoDto>(item);
+
+            return dto;
         }
 
         IEnumerable<VideoDto> IVideoService.GetAll()
         {
-            throw new NotImplementedException();
+            return mapper.Map<List<VideoDto>>(videoR.GetAll());
         }
     }
 }

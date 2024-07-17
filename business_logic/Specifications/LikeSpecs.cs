@@ -9,7 +9,7 @@ public static class LikeSpecs
     {
         public ById(int Id)
         {
-            Query.Where(x => x.Id == Id);
+            Query.Where(x => x.Id == x.Id);
         }
     }
 }

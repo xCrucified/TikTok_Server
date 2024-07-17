@@ -12,6 +12,9 @@ namespace data_access.data
 {
     public class TikTokDbContext : IdentityDbContext<User>
     {
+        public TikTokDbContext() { }
+        public TikTokDbContext(DbContextOptions options) : base(options) { }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

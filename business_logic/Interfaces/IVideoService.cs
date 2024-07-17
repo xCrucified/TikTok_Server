@@ -7,7 +7,7 @@ namespace business_logic.Interfaces
         Task<IEnumerable<VideoDto>> Get(IEnumerable<int> ids);
         IEnumerable<VideoDto> GetAll();
         Task<VideoDto> Get(int id);
-        void Crete(CreateVideoModel videoModel);
+        void Create(CreateVideoModel videoModel);
         Task Edit(VideoDto videoDto);
         Task Delete(int id);
     }

@@ -15,7 +15,10 @@ namespace data_access.data.configs
         {
             builder.HasKey(x => x.Id);
             builder.ToTable("RefreshTokens");
-            builder.HasOne(x => x.User).WithMany(x => x.RefreshTokens).HasForeignKey(x => x.UserId);
+
+            builder
+                .HasOne(x => x.User).WithMany(x => x.RefreshTokens).HasForeignKey(x => x.UserId);
+
         }
     }
 }

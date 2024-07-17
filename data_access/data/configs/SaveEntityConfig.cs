@@ -16,6 +16,8 @@ namespace data_access.data.configs
         
             builder.HasKey(x => x.Id);
             builder.ToTable("Saves");
+
+
             
         }
     }
