@@ -12,7 +12,7 @@ namespace business_logic.Services
 
         Task IVideoService.Delete(int id)
         {
-            throw new NotImplementedException();
+            throw new NotImplementedException(); 
         }
 
         Task IVideoService.Edit(VideoDto videoDto)
