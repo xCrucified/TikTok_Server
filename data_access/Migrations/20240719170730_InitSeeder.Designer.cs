@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using data_access.data;
 
@@ -11,9 +12,11 @@ using data_access.data;
 namespace data_access.Migrations
 {
     [DbContext(typeof(TikTokDbContext))]
-    partial class TikTokDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240719170730_InitSeeder")]
+    partial class InitSeeder
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -564,11 +567,9 @@ namespace data_access.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "eb6653b1-0e3f-4d18-abc2-f24f57874dcd",
                             Id = "eca9d97d-e09c-457e-bdf8-45f486560607",
                             AccessFailedCount = 0,
                             Balance = 99999m,
-                            ConcurrencyStamp = "bc6b019e-4d8e-4bbf-9070-9e42d52fe6f3",
                             ConcurrencyStamp = "0c843c90-a539-48b8-9e8c-87fdf0494c8b",
                             Description = "admin",
                             EmailConfirmed = false,
@@ -577,7 +578,6 @@ namespace data_access.Migrations
                             LockoutEnabled = false,
                             PhoneNumber = "123456789",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "d32e9147-f153-45f6-9ff1-5a6a6d4a9928",
                             SecurityStamp = "4598d62f-4b19-41fd-a9af-b30b2de2c428",
                             TwoFactorEnabled = false,
                             UserName = "admin"

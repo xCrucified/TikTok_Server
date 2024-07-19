@@ -16,7 +16,6 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddJWT(builder.Configuration);
 builder.Services.AddCustomServices();
-
 builder.Services.AddDbContext(connStr);
 builder.Services.AddIdentity();
 builder.Services.AddRepositories();
@@ -26,9 +25,6 @@ builder.Services.AddAutoMapper();
 builder.Services.AddFluentValidators();
 
 builder.Services.AddCustomServices();
-
-//JobConfigurator.AddJobs();
-//builder.Services.AddHangfire(connStr);
 
 var app = builder.Build();
 
@@ -58,8 +54,6 @@ app.UseCors(options =>
 });
 
 app.UseAuthorization();
-
-//app.UseHangfireDashboard("/dash");
 
 app.MapControllers();
 
