@@ -4,7 +4,7 @@ namespace business_logic.Interfaces;
 
 public interface ISaveService
 {
-    Task<IEnumerable<VideoDto>> Get(IEnumerable<int> ids);
+    Task<SaveDto> Get(int id);
     void Add(CreateSaveModel saveModel);
     Task Remove(int id);
 }

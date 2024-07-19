@@ -26,9 +26,5 @@
 		<ProjectReference Include="..\business_logic\business_logic.csproj" />
 		<ProjectReference Include="..\data_access\data_access.csproj" />
 	</ItemGroup>
-	
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
 
 </Project>

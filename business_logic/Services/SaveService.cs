@@ -23,9 +23,9 @@ public class SaveService : ISaveService
         saveR.Save();
     }
 
-    public async Task<IEnumerable<VideoDto>> Get(IEnumerable<int> ids)
+    public async Task<SaveDto> Get(int id)
     {
-        return mapper.Map<List<VideoDto>>(await saveR.GetListBySpec(new SaveSpecs.ById(ids)));
+        return mapper.Map<SaveDto>(await saveR.GetListBySpec(new SaveSpecs.ById(id)));
     }
 
     public async Task Remove(int id)

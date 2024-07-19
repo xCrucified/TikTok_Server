@@ -9,6 +9,7 @@ namespace TikTok_Server.Helpers
         public const string ADMIN = "admin";
         public const string USER = "user";
     }
+
     public static class Seeder
     {
         public static async Task SeedRoles(this IServiceProvider app)
@@ -34,6 +35,8 @@ namespace TikTok_Server.Helpers
 
             const string USERNAME = "myadmin@myadmin.com";
             const string PASSWORD = "Admin1@";
+            const string IMAGEURL = @"~wwwroot/images/admin.jpg";
+            DateTime BIRTHDATE = new(2000, 03, 04);
 
             var existingUser = await userManager.FindByNameAsync(USERNAME);
 
@@ -42,7 +45,9 @@ namespace TikTok_Server.Helpers
                 var user = new User
                 {
                     UserName = USERNAME,
-                    Email = USERNAME
+                    Email = USERNAME,
+                    AvatarPicture = IMAGEURL,
+                    Birthdate = BIRTHDATE
                 };
 
                 var result = await userManager.CreateAsync(user, PASSWORD);
