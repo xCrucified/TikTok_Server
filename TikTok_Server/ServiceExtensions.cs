@@ -9,15 +9,15 @@ namespace TikTok_Server
 {
     public static class ServiceExtensions
     {
-        public static void AddHangfire(this IServiceCollection services, string connectionString)
-        {
-            services.AddHangfire(config =>
-            {
-                config.UseSqlServerStorage(connectionString);
-            });
+        //public static void AddHangfire(this IServiceCollection services, string connectionString)
+        //{
+        //    services.AddHangfire(config =>
+        //    {
+        //        config.UseSqlServerStorage(connectionString);
+        //    });
 
-            services.AddHangfireServer();
-        }
+        //    services.AddHangfireServer();
+        //}
         public static void AddJWT(this IServiceCollection services, IConfiguration configuration)
         {
             var jwtOpts = configuration.GetSection(nameof(JwtOptions)).Get<JwtOptions>()!;

@@ -26,5 +26,10 @@
 		<ProjectReference Include="..\business_logic\business_logic.csproj" />
 		<ProjectReference Include="..\data_access\data_access.csproj" />
 	</ItemGroup>
+	
+	<ItemGroup>
+	  <Folder Include="wwwroot\images\" />
+	  <Folder Include="wwwroot\videos\" />
+	</ItemGroup>
 
 </Project>

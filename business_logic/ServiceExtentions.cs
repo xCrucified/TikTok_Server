@@ -3,6 +3,7 @@ using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
 using business_logic.Interfaces;
 using business_logic.Services;
+using business_logic.Profiles;
 
 namespace business_logic
 {
@@ -13,7 +14,7 @@ namespace business_logic
             //services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddSingleton(provider => new MapperConfiguration(cfg =>
             {
-                //cfg.AddProfile(new ApplicationProfile(provider.CreateScope().ServiceProvider.GetService</*IFileService*/>()!));
+                cfg.AddProfile(new ApplicationProfile(provider.CreateScope().ServiceProvider.GetService<IFileService>()!));
             }).CreateMapper());
         }
 

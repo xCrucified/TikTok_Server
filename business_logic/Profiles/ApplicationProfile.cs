@@ -2,6 +2,7 @@
 using business_logic.DTOs;
 using business_logic.Entities;
 using business_logic.Interfaces;
+using business_logic.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace business_logic.Profiles
 {
-    internal class ApplicationProfile : Profile
+    public class ApplicationProfile : Profile
     {
         public ApplicationProfile(IFileService fileService)
         {

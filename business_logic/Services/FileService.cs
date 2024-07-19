@@ -6,7 +6,8 @@ namespace business_logic.Services;
 
 public class FileService: IFileService
 {
-    private const string imageFolder = "videos";
+    private const string imageFolder = "images";
+    private const string videoFolder = "videos";
     private readonly IWebHostEnvironment environment;
     public FileService(IWebHostEnvironment environment)
     {
@@ -17,8 +18,8 @@ public class FileService: IFileService
     {
         string root = environment.WebRootPath;
         string name = Guid.NewGuid().ToString();
-        string extension = Path.GetExtension(file.FileName); 
-        string fullName = name + extension;         
+        string extension = Path.GetExtension(file.FileName);
+        string fullName = name + extension;
 
         string imagePath = Path.Combine(imageFolder, fullName);
         string imageFullPath = Path.Combine(root, imagePath);
@@ -27,16 +28,18 @@ public class FileService: IFileService
         {
             await file.CopyToAsync(fs);
         }
+
         return Path.DirectorySeparatorChar + imagePath;
     }
+
     public async Task<string> SaveVideo(IFormFile file)
     {
         string root = environment.WebRootPath;
         string name = Guid.NewGuid().ToString();
-        string extension = Path.GetExtension(file.FileName); 
-        string fullName = name + extension;         
+        string extension = Path.GetExtension(file.FileName);
+        string fullName = name + extension;
 
-        string videoPath = Path.Combine(imageFolder, fullName);
+        string videoPath = Path.Combine(videoFolder, fullName);
         string videoFullPath = Path.Combine(root, videoPath);
 
         using (FileStream fs = new FileStream(videoFullPath, FileMode.Create))

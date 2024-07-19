@@ -3,9 +3,10 @@ using TikTok_Server;
 using data_access;
 using Hangfire;
 using TikTok_Server.Helpers;
+using business_logic.Profiles;
 
 var builder = WebApplication.CreateBuilder(args);
-var connStr = builder.Configuration.GetConnectionString("SomeeDb")!;
+var connStr = builder.Configuration.GetConnectionString("TikTokDb")!;
 
 // Add services to the container.
 
@@ -20,6 +21,7 @@ builder.Services.AddDbContext(connStr);
 builder.Services.AddIdentity();
 builder.Services.AddRepositories();
 
+//builder.Services.AddAutoMapper(typeof(ApplicationProfile));
 builder.Services.AddAutoMapper();
 builder.Services.AddFluentValidators();
 
@@ -30,11 +32,11 @@ builder.Services.AddCustomServices();
 
 var app = builder.Build();
 
-//using (var scope = app.Services.CreateScope())
-//{
-//    scope.ServiceProvider.SeedRoles().Wait();
-//    scope.ServiceProvider.SeedAdmin().Wait();
-//}
+using (var scope = app.Services.CreateScope())
+{
+    scope.ServiceProvider.SeedRoles().Wait();
+    scope.ServiceProvider.SeedAdmin().Wait();
+}
 
 if (app.Environment.IsDevelopment())
 {
@@ -50,7 +52,7 @@ app.UseMiddleware<MiddlewareHandler>();
 
 app.UseCors(options =>
 {
-    options.WithOrigins("http://localhost:4200", "https://localhost:7018"/*, "https://yellow-pond-03cd86610.5.azurestaticapps.net"*/)
+    options.WithOrigins("http://localhost:4200", "https://localhost:7018", "https://localhost:5602"/*, "https://yellow-pond-03cd86610.5.azurestaticapps.net"*/)
         .AllowAnyMethod()
         .AllowAnyHeader();
 });

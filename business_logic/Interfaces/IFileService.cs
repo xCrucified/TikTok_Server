@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace business_logic.Interfaces
 {
-    internal interface IFileService
+    public interface IFileService
     {
         Task<string> SaveVideo(IFormFile file);
         Task<string> SaveImage(IFormFile file);
