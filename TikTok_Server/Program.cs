@@ -15,7 +15,6 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddJWT(builder.Configuration);
 builder.Services.AddCustomServices();
-
 builder.Services.AddDbContext(connStr);
 builder.Services.AddIdentity();
 builder.Services.AddRepositories();
@@ -25,16 +24,13 @@ builder.Services.AddFluentValidators();
 
 builder.Services.AddCustomServices();
 
-//JobConfigurator.AddJobs();
-//builder.Services.AddHangfire(connStr);
-
 var app = builder.Build();
 
-//using (var scope = app.Services.CreateScope())
-//{
-//    scope.ServiceProvider.SeedRoles().Wait();
-//    scope.ServiceProvider.SeedAdmin().Wait();
-//}
+using (var scope = app.Services.CreateScope())
+{
+    scope.ServiceProvider.SeedRoles().Wait();
+    scope.ServiceProvider.SeedAdmin().Wait();
+}
 
 if (app.Environment.IsDevelopment())
 {
@@ -56,8 +52,6 @@ app.UseCors(options =>
 });
 
 app.UseAuthorization();
-
-//app.UseHangfireDashboard("/dash");
 
 app.MapControllers();
 
