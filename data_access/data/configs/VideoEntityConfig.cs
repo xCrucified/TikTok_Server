@@ -19,7 +19,7 @@ namespace data_access.data.configs
             builder
                 .HasOne(x => x.User).WithMany(x => x.Videos).HasForeignKey(x => x.UserId);
             builder
-                .HasMany(x => x.Comments).WithOne(x => x.Video).HasForeignKey(x => x.VideoId);
+                .HasMany(x => x.Comments).WithOne(x => x.Video).HasForeignKey(x => x.VideoId).OnDelete(DeleteBehavior.ClientCascade);
             builder
                 .HasMany(x => x.Likes).WithOne(x => x.Video).HasForeignKey(x => x.VideoId);
             builder

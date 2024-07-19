@@ -18,13 +18,13 @@ namespace business_logic.Services
             this.mapper = mapper;
             this.videoR = videoR;
         }
-        void IVideoService.Create(CreateVideoModel videoModel)
+        public void Create(CreateVideoModel videoModel)
         {
             videoR.Insert(mapper.Map<Video>(videoModel));
             videoR.Save();
         }
 
-        async Task IVideoService.Delete(int id)
+        public async Task Delete(int id)
         {
             if (id < 0) throw new HttpException(Errors.ItemNotFound, HttpStatusCode.BadRequest);
 
@@ -36,7 +36,7 @@ namespace business_logic.Services
             videoR.Save();
         }
         
-        async Task IVideoService.Edit(VideoDto videoDto)
+        public async Task Edit(VideoDto videoDto)
         {
             videoR.Update(mapper.Map<Video>(videoDto));
             videoR.Save();
@@ -47,7 +47,7 @@ namespace business_logic.Services
             return mapper.Map<List<VideoDto>>(await videoR.GetListBySpec(new VideoSpecs.ByIds(ids)));
         }
 
-        async Task<VideoDto> IVideoService.Get(int id)
+        public async Task<VideoDto> Get(int id)
         {
             if (id < 0) throw new HttpException(Errors.ItemNotFound, HttpStatusCode.BadRequest);
 
@@ -59,7 +59,7 @@ namespace business_logic.Services
             return dto;
         }
 
-        IEnumerable<VideoDto> IVideoService.GetAll()
+        public IEnumerable<VideoDto> GetAll()
         {
             return mapper.Map<List<VideoDto>>(videoR.GetAll());
         }

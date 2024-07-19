@@ -5,7 +5,7 @@ using Hangfire;
 using TikTok_Server.Helpers;
 
 var builder = WebApplication.CreateBuilder(args);
-var connStr = builder.Configuration.GetConnectionString("TikTokDb")!;
+var connStr = builder.Configuration.GetConnectionString("SomeeDb")!;
 
 // Add services to the container.
 
@@ -25,8 +25,8 @@ builder.Services.AddFluentValidators();
 
 builder.Services.AddCustomServices();
 
-JobConfigurator.AddJobs();
-builder.Services.AddHangfire(connStr);
+//JobConfigurator.AddJobs();
+//builder.Services.AddHangfire(connStr);
 
 var app = builder.Build();
 
@@ -57,7 +57,7 @@ app.UseCors(options =>
 
 app.UseAuthorization();
 
-app.UseHangfireDashboard("/dash");
+//app.UseHangfireDashboard("/dash");
 
 app.MapControllers();
 

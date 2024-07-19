@@ -4,11 +4,11 @@ namespace business_logic.Interfaces
 {
     public interface IVideoService
     {
-        Task<IEnumerable<VideoDto>> Get(IEnumerable<int> ids);
-        IEnumerable<VideoDto> GetAll();
-        Task<VideoDto> Get(int id);
-        void Create(CreateVideoModel videoModel);
-        Task Edit(VideoDto videoDto);
-        Task Delete(int id);
+        public Task<IEnumerable<VideoDto>> Get(IEnumerable<int> ids);
+        public IEnumerable<VideoDto> GetAll();
+        public Task<VideoDto> Get(int id);
+        public void Create(CreateVideoModel videoModel);
+        public Task Edit(VideoDto videoDto);
+        public Task Delete(int id);
     }
 }
