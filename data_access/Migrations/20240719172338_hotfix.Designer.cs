@@ -12,8 +12,8 @@ using data_access.data;
 namespace data_access.Migrations
 {
     [DbContext(typeof(TikTokDbContext))]
-    [Migration("20240719170730_InitSeeder")]
-    partial class InitSeeder
+    [Migration("20240719172338_hotfix")]
+    partial class hotfix
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -288,70 +288,70 @@ namespace data_access.Migrations
                         new
                         {
                             Id = 1,
-                            DateTimeLike = new DateTime(2024, 7, 19, 20, 7, 29, 987, DateTimeKind.Local).AddTicks(4386),
+                            DateTimeLike = new DateTime(2024, 7, 19, 20, 23, 37, 879, DateTimeKind.Local).AddTicks(5573),
                             UserId = "1",
                             VideoId = 1
                         },
                         new
                         {
                             Id = 2,
-                            DateTimeLike = new DateTime(2024, 7, 19, 20, 7, 29, 987, DateTimeKind.Local).AddTicks(4389),
+                            DateTimeLike = new DateTime(2024, 7, 19, 20, 23, 37, 879, DateTimeKind.Local).AddTicks(5576),
                             UserId = "2",
                             VideoId = 2
                         },
                         new
                         {
                             Id = 3,
-                            DateTimeLike = new DateTime(2024, 7, 19, 20, 7, 29, 987, DateTimeKind.Local).AddTicks(4391),
+                            DateTimeLike = new DateTime(2024, 7, 19, 20, 23, 37, 879, DateTimeKind.Local).AddTicks(5578),
                             UserId = "3",
                             VideoId = 3
                         },
                         new
                         {
                             Id = 4,
-                            DateTimeLike = new DateTime(2024, 7, 19, 20, 7, 29, 987, DateTimeKind.Local).AddTicks(4393),
+                            DateTimeLike = new DateTime(2024, 7, 19, 20, 23, 37, 879, DateTimeKind.Local).AddTicks(5581),
                             UserId = "4",
                             VideoId = 4
                         },
                         new
                         {
                             Id = 5,
-                            DateTimeLike = new DateTime(2024, 7, 19, 20, 7, 29, 987, DateTimeKind.Local).AddTicks(4395),
+                            DateTimeLike = new DateTime(2024, 7, 19, 20, 23, 37, 879, DateTimeKind.Local).AddTicks(5583),
                             UserId = "5",
                             VideoId = 5
                         },
                         new
                         {
                             Id = 6,
-                            DateTimeLike = new DateTime(2024, 7, 19, 20, 7, 29, 987, DateTimeKind.Local).AddTicks(4398),
+                            DateTimeLike = new DateTime(2024, 7, 19, 20, 23, 37, 879, DateTimeKind.Local).AddTicks(5585),
                             UserId = "6",
                             VideoId = 6
                         },
                         new
                         {
                             Id = 7,
-                            DateTimeLike = new DateTime(2024, 7, 19, 20, 7, 29, 987, DateTimeKind.Local).AddTicks(4400),
+                            DateTimeLike = new DateTime(2024, 7, 19, 20, 23, 37, 879, DateTimeKind.Local).AddTicks(5587),
                             UserId = "7",
                             VideoId = 7
                         },
                         new
                         {
                             Id = 8,
-                            DateTimeLike = new DateTime(2024, 7, 19, 20, 7, 29, 987, DateTimeKind.Local).AddTicks(4402),
+                            DateTimeLike = new DateTime(2024, 7, 19, 20, 23, 37, 879, DateTimeKind.Local).AddTicks(5589),
                             UserId = "8",
                             VideoId = 8
                         },
                         new
                         {
                             Id = 9,
-                            DateTimeLike = new DateTime(2024, 7, 19, 20, 7, 29, 987, DateTimeKind.Local).AddTicks(4404),
+                            DateTimeLike = new DateTime(2024, 7, 19, 20, 23, 37, 879, DateTimeKind.Local).AddTicks(5591),
                             UserId = "9",
                             VideoId = 9
                         },
                         new
                         {
                             Id = 10,
-                            DateTimeLike = new DateTime(2024, 7, 19, 20, 7, 29, 987, DateTimeKind.Local).AddTicks(4406),
+                            DateTimeLike = new DateTime(2024, 7, 19, 20, 23, 37, 879, DateTimeKind.Local).AddTicks(5593),
                             UserId = "10",
                             VideoId = 10
                         });
@@ -413,70 +413,70 @@ namespace data_access.Migrations
                         new
                         {
                             Id = 1,
-                            DateSave = new DateTime(2024, 7, 19, 20, 7, 29, 987, DateTimeKind.Local).AddTicks(4345),
+                            DateSave = new DateTime(2024, 7, 19, 20, 23, 37, 879, DateTimeKind.Local).AddTicks(5534),
                             UserId = "1",
                             VideoId = 1
                         },
                         new
                         {
                             Id = 2,
-                            DateSave = new DateTime(2024, 7, 19, 20, 7, 29, 987, DateTimeKind.Local).AddTicks(4348),
+                            DateSave = new DateTime(2024, 7, 19, 20, 23, 37, 879, DateTimeKind.Local).AddTicks(5538),
                             UserId = "2",
                             VideoId = 2
                         },
                         new
                         {
                             Id = 3,
-                            DateSave = new DateTime(2024, 7, 19, 20, 7, 29, 987, DateTimeKind.Local).AddTicks(4351),
+                            DateSave = new DateTime(2024, 7, 19, 20, 23, 37, 879, DateTimeKind.Local).AddTicks(5540),
                             UserId = "3",
                             VideoId = 3
                         },
                         new
                         {
                             Id = 4,
-                            DateSave = new DateTime(2024, 7, 19, 20, 7, 29, 987, DateTimeKind.Local).AddTicks(4353),
+                            DateSave = new DateTime(2024, 7, 19, 20, 23, 37, 879, DateTimeKind.Local).AddTicks(5543),
                             UserId = "4",
                             VideoId = 4
                         },
                         new
                         {
                             Id = 5,
-                            DateSave = new DateTime(2024, 7, 19, 20, 7, 29, 987, DateTimeKind.Local).AddTicks(4355),
+                            DateSave = new DateTime(2024, 7, 19, 20, 23, 37, 879, DateTimeKind.Local).AddTicks(5545),
                             UserId = "5",
                             VideoId = 5
                         },
                         new
                         {
                             Id = 6,
-                            DateSave = new DateTime(2024, 7, 19, 20, 7, 29, 987, DateTimeKind.Local).AddTicks(4357),
+                            DateSave = new DateTime(2024, 7, 19, 20, 23, 37, 879, DateTimeKind.Local).AddTicks(5547),
                             UserId = "6",
                             VideoId = 6
                         },
                         new
                         {
                             Id = 7,
-                            DateSave = new DateTime(2024, 7, 19, 20, 7, 29, 987, DateTimeKind.Local).AddTicks(4360),
+                            DateSave = new DateTime(2024, 7, 19, 20, 23, 37, 879, DateTimeKind.Local).AddTicks(5549),
                             UserId = "7",
                             VideoId = 7
                         },
                         new
                         {
                             Id = 8,
-                            DateSave = new DateTime(2024, 7, 19, 20, 7, 29, 987, DateTimeKind.Local).AddTicks(4362),
+                            DateSave = new DateTime(2024, 7, 19, 20, 23, 37, 879, DateTimeKind.Local).AddTicks(5551),
                             UserId = "8",
                             VideoId = 8
                         },
                         new
                         {
                             Id = 9,
-                            DateSave = new DateTime(2024, 7, 19, 20, 7, 29, 987, DateTimeKind.Local).AddTicks(4364),
+                            DateSave = new DateTime(2024, 7, 19, 20, 23, 37, 879, DateTimeKind.Local).AddTicks(5553),
                             UserId = "9",
                             VideoId = 9
                         },
                         new
                         {
                             Id = 10,
-                            DateSave = new DateTime(2024, 7, 19, 20, 7, 29, 987, DateTimeKind.Local).AddTicks(4366),
+                            DateSave = new DateTime(2024, 7, 19, 20, 23, 37, 879, DateTimeKind.Local).AddTicks(5555),
                             UserId = "10",
                             VideoId = 10
                         });
@@ -567,10 +567,10 @@ namespace data_access.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "eca9d97d-e09c-457e-bdf8-45f486560607",
+                            Id = "1",
                             AccessFailedCount = 0,
                             Balance = 99999m,
-                            ConcurrencyStamp = "0c843c90-a539-48b8-9e8c-87fdf0494c8b",
+                            ConcurrencyStamp = "280cd20f-b78d-49ee-8563-705d24305513",
                             Description = "admin",
                             EmailConfirmed = false,
                             Followers = -1,
@@ -578,16 +578,16 @@ namespace data_access.Migrations
                             LockoutEnabled = false,
                             PhoneNumber = "123456789",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "4598d62f-4b19-41fd-a9af-b30b2de2c428",
+                            SecurityStamp = "3bb24b01-4c17-4b88-b78f-d7b39961a5a2",
                             TwoFactorEnabled = false,
                             UserName = "admin"
                         },
                         new
                         {
-                            Id = "5471030f-cc9a-47c7-ba90-62d647f4cdc6",
+                            Id = "2",
                             AccessFailedCount = 0,
                             Balance = 1000m,
-                            ConcurrencyStamp = "dbc46cba-0203-4740-baef-39df71253324",
+                            ConcurrencyStamp = "c8bffbd6-50dd-4a2e-b824-02dc908a13f6",
                             Description = "user1",
                             EmailConfirmed = false,
                             Followers = 10,
@@ -595,16 +595,16 @@ namespace data_access.Migrations
                             LockoutEnabled = false,
                             PhoneNumber = "234567890",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "17075708-4136-404a-915a-1caa81137434",
+                            SecurityStamp = "cb46ea68-138d-4b21-8a48-481348ad10e8",
                             TwoFactorEnabled = false,
                             UserName = "user1"
                         },
                         new
                         {
-                            Id = "792dc171-726b-4d10-a7ac-61a2cbe88027",
+                            Id = "3",
                             AccessFailedCount = 0,
                             Balance = 2000m,
-                            ConcurrencyStamp = "f755485b-69d4-4a05-913d-3cc225a1e8ea",
+                            ConcurrencyStamp = "2cf1423c-274b-4f01-ae85-d4716e06bb30",
                             Description = "user2",
                             EmailConfirmed = false,
                             Followers = 20,
@@ -612,16 +612,16 @@ namespace data_access.Migrations
                             LockoutEnabled = false,
                             PhoneNumber = "345678901",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "51838524-29d8-487b-bb69-1ad34a273361",
+                            SecurityStamp = "64895769-b43a-4248-b52c-3230afb70695",
                             TwoFactorEnabled = false,
                             UserName = "user2"
                         },
                         new
                         {
-                            Id = "58f1eb52-e65c-4ea5-be62-c2c1c4eeb8cf",
+                            Id = "4",
                             AccessFailedCount = 0,
                             Balance = 3000m,
-                            ConcurrencyStamp = "0fd38151-d602-49be-a292-0dd0dff5f3f6",
+                            ConcurrencyStamp = "9fb7c77b-269f-469b-80d6-d833c0f50d27",
                             Description = "user3",
                             EmailConfirmed = false,
                             Followers = 30,
@@ -629,16 +629,16 @@ namespace data_access.Migrations
                             LockoutEnabled = false,
                             PhoneNumber = "456789012",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "1dd78c11-39f2-43ef-844c-3dba730a5847",
+                            SecurityStamp = "0e16d653-37df-42c1-be70-67732cd383bc",
                             TwoFactorEnabled = false,
                             UserName = "user3"
                         },
                         new
                         {
-                            Id = "5e6e040a-a296-4d6e-9533-3acdcc052171",
+                            Id = "5",
                             AccessFailedCount = 0,
                             Balance = 4000m,
-                            ConcurrencyStamp = "e95f9402-abf6-4fe3-af7e-3188742d72ee",
+                            ConcurrencyStamp = "a27f0bd0-8592-4e0f-b02e-bf49d5e765ef",
                             Description = "user4",
                             EmailConfirmed = false,
                             Followers = 40,
@@ -646,16 +646,16 @@ namespace data_access.Migrations
                             LockoutEnabled = false,
                             PhoneNumber = "567890123",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "979b1151-c795-4763-844e-248e788a956f",
+                            SecurityStamp = "5135f650-c63e-4d5f-9b2a-b9a3e64366f8",
                             TwoFactorEnabled = false,
                             UserName = "user4"
                         },
                         new
                         {
-                            Id = "d668690e-ffbf-4bad-8895-668f95dc5cc1",
+                            Id = "6",
                             AccessFailedCount = 0,
                             Balance = 5000m,
-                            ConcurrencyStamp = "9df6ec3e-185c-4af3-a7b2-6287e74031f3",
+                            ConcurrencyStamp = "779de28f-bb9a-457d-8ecb-229b35dbcfa7",
                             Description = "user5",
                             EmailConfirmed = false,
                             Followers = 50,
@@ -663,16 +663,16 @@ namespace data_access.Migrations
                             LockoutEnabled = false,
                             PhoneNumber = "678901234",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "47f7b10a-6dc5-43ee-8a0a-a6f1ad06c470",
+                            SecurityStamp = "be19e49d-bd5d-4d51-bab1-c60cf9113ebc",
                             TwoFactorEnabled = false,
                             UserName = "user5"
                         },
                         new
                         {
-                            Id = "82c49ce0-0bc6-4501-a675-91c8d6ac801d",
+                            Id = "7",
                             AccessFailedCount = 0,
                             Balance = 6000m,
-                            ConcurrencyStamp = "4f8e9985-c5d9-48d5-adef-a95609e5ca00",
+                            ConcurrencyStamp = "170e51ea-5aa0-493c-b6ca-5902734ee50b",
                             Description = "user6",
                             EmailConfirmed = false,
                             Followers = 60,
@@ -680,16 +680,16 @@ namespace data_access.Migrations
                             LockoutEnabled = false,
                             PhoneNumber = "789012345",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "07ad6d4e-61fa-4254-a729-5fdfd03af8f0",
+                            SecurityStamp = "ebe265d6-43c8-4d67-a9e4-8a8011464fe0",
                             TwoFactorEnabled = false,
                             UserName = "user6"
                         },
                         new
                         {
-                            Id = "dd02ed32-0eec-499d-95e7-1a9b4e0f8dff",
+                            Id = "8",
                             AccessFailedCount = 0,
                             Balance = 7000m,
-                            ConcurrencyStamp = "92195542-4e9c-4a37-bae2-962b22c3fd8d",
+                            ConcurrencyStamp = "59dac5c0-e8d5-4f3f-9a46-5ae680f8aa1e",
                             Description = "user7",
                             EmailConfirmed = false,
                             Followers = 70,
@@ -697,16 +697,16 @@ namespace data_access.Migrations
                             LockoutEnabled = false,
                             PhoneNumber = "890123456",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "6dfcc411-bb78-4cbf-bfec-171a4fbc547d",
+                            SecurityStamp = "dff77a63-37e2-49f8-9966-5fb002d6dac6",
                             TwoFactorEnabled = false,
                             UserName = "user7"
                         },
                         new
                         {
-                            Id = "d6366cae-d385-404d-bc6b-21af12662404",
+                            Id = "9",
                             AccessFailedCount = 0,
                             Balance = 8000m,
-                            ConcurrencyStamp = "83f3ef0f-1b77-4ef8-be94-cb71c2dcc14a",
+                            ConcurrencyStamp = "00255325-4342-439e-a1d3-e6699cf0bad6",
                             Description = "user8",
                             EmailConfirmed = false,
                             Followers = 80,
@@ -714,16 +714,16 @@ namespace data_access.Migrations
                             LockoutEnabled = false,
                             PhoneNumber = "901234567",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "484e87d6-8587-4da0-9e9c-13095636442f",
+                            SecurityStamp = "36f7b0a3-f28f-4909-b35d-6a82cac0726d",
                             TwoFactorEnabled = false,
                             UserName = "user8"
                         },
                         new
                         {
-                            Id = "3237ac8e-f595-4624-a32f-4ba5fede3495",
+                            Id = "10",
                             AccessFailedCount = 0,
                             Balance = 9000m,
-                            ConcurrencyStamp = "13335acd-829a-489b-9712-35e13c0f7df0",
+                            ConcurrencyStamp = "5cb702c3-e2d1-486d-ba7e-306d70388dd6",
                             Description = "user9",
                             EmailConfirmed = false,
                             Followers = 90,
@@ -731,7 +731,7 @@ namespace data_access.Migrations
                             LockoutEnabled = false,
                             PhoneNumber = "012345678",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "15380209-a3df-4326-8793-147a1fd01c9c",
+                            SecurityStamp = "1634814e-a767-48da-9dd4-8e9fe2b90d6b",
                             TwoFactorEnabled = false,
                             UserName = "user9"
                         });
@@ -776,7 +776,7 @@ namespace data_access.Migrations
                         new
                         {
                             Id = 1,
-                            PublishDate = new DateTime(2024, 7, 19, 20, 7, 29, 987, DateTimeKind.Local).AddTicks(4222),
+                            PublishDate = new DateTime(2024, 7, 19, 20, 23, 37, 879, DateTimeKind.Local).AddTicks(5368),
                             Title = "test1",
                             UserId = "1",
                             VideoUrl = "https://www.youtube.com/watch?v=bFhY0LH9XxY",
@@ -786,7 +786,7 @@ namespace data_access.Migrations
                         new
                         {
                             Id = 2,
-                            PublishDate = new DateTime(2024, 7, 19, 20, 7, 29, 987, DateTimeKind.Local).AddTicks(4272),
+                            PublishDate = new DateTime(2024, 7, 19, 20, 23, 37, 879, DateTimeKind.Local).AddTicks(5412),
                             Title = "test2",
                             UserId = "2",
                             VideoUrl = "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
@@ -796,7 +796,7 @@ namespace data_access.Migrations
                         new
                         {
                             Id = 3,
-                            PublishDate = new DateTime(2024, 7, 19, 20, 7, 29, 987, DateTimeKind.Local).AddTicks(4275),
+                            PublishDate = new DateTime(2024, 7, 19, 20, 23, 37, 879, DateTimeKind.Local).AddTicks(5457),
                             Title = "test3",
                             UserId = "3",
                             VideoUrl = "https://www.youtube.com/watch?v=3JZ_D3ELwOQ",
@@ -806,7 +806,7 @@ namespace data_access.Migrations
                         new
                         {
                             Id = 4,
-                            PublishDate = new DateTime(2024, 7, 19, 20, 7, 29, 987, DateTimeKind.Local).AddTicks(4278),
+                            PublishDate = new DateTime(2024, 7, 19, 20, 23, 37, 879, DateTimeKind.Local).AddTicks(5461),
                             Title = "test4",
                             UserId = "4",
                             VideoUrl = "https://www.youtube.com/watch?v=oHg5SJYRHA0",
@@ -816,7 +816,7 @@ namespace data_access.Migrations
                         new
                         {
                             Id = 5,
-                            PublishDate = new DateTime(2024, 7, 19, 20, 7, 29, 987, DateTimeKind.Local).AddTicks(4280),
+                            PublishDate = new DateTime(2024, 7, 19, 20, 23, 37, 879, DateTimeKind.Local).AddTicks(5463),
                             Title = "test5",
                             UserId = "5",
                             VideoUrl = "https://www.youtube.com/watch?v=ZZ5LpwO-An4",
@@ -826,7 +826,7 @@ namespace data_access.Migrations
                         new
                         {
                             Id = 6,
-                            PublishDate = new DateTime(2024, 7, 19, 20, 7, 29, 987, DateTimeKind.Local).AddTicks(4283),
+                            PublishDate = new DateTime(2024, 7, 19, 20, 23, 37, 879, DateTimeKind.Local).AddTicks(5466),
                             Title = "test6",
                             UserId = "6",
                             VideoUrl = "https://www.youtube.com/watch?v=6_b7RDuLwcI",
@@ -836,7 +836,7 @@ namespace data_access.Migrations
                         new
                         {
                             Id = 7,
-                            PublishDate = new DateTime(2024, 7, 19, 20, 7, 29, 987, DateTimeKind.Local).AddTicks(4286),
+                            PublishDate = new DateTime(2024, 7, 19, 20, 23, 37, 879, DateTimeKind.Local).AddTicks(5469),
                             Title = "test7",
                             UserId = "7",
                             VideoUrl = "https://www.youtube.com/watch?v=tVj0ZTS4WF4",
@@ -846,7 +846,7 @@ namespace data_access.Migrations
                         new
                         {
                             Id = 8,
-                            PublishDate = new DateTime(2024, 7, 19, 20, 7, 29, 987, DateTimeKind.Local).AddTicks(4288),
+                            PublishDate = new DateTime(2024, 7, 19, 20, 23, 37, 879, DateTimeKind.Local).AddTicks(5471),
                             Title = "test8",
                             UserId = "8",
                             VideoUrl = "https://www.youtube.com/watch?v=FTQbiNvZqaY",
@@ -856,7 +856,7 @@ namespace data_access.Migrations
                         new
                         {
                             Id = 9,
-                            PublishDate = new DateTime(2024, 7, 19, 20, 7, 29, 987, DateTimeKind.Local).AddTicks(4291),
+                            PublishDate = new DateTime(2024, 7, 19, 20, 23, 37, 879, DateTimeKind.Local).AddTicks(5474),
                             Title = "test9",
                             UserId = "9",
                             VideoUrl = "https://www.youtube.com/watch?v=lXMskKTw3Bc",
@@ -866,9 +866,9 @@ namespace data_access.Migrations
                         new
                         {
                             Id = 10,
-                            PublishDate = new DateTime(2024, 7, 19, 20, 7, 29, 987, DateTimeKind.Local).AddTicks(4293),
+                            PublishDate = new DateTime(2024, 7, 19, 20, 23, 37, 879, DateTimeKind.Local).AddTicks(5476),
                             Title = "test10",
-                            UserId = "0",
+                            UserId = "10",
                             VideoUrl = "https://www.youtube.com/watch?v=60ItHLz5WEA",
                             Views = 0,
                             isPrivate = false

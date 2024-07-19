@@ -20,7 +20,7 @@ namespace data_access.data
             builder.AddJsonFile("appsettings.json");
             IConfigurationRoot config = builder.Build();
 
-            string? connectionString = config.GetConnectionString("TikTokDb1");
+            string? connectionString = config.GetConnectionString("TikTokDb");
             optionsBuilder.UseSqlServer(connectionString);
             return new TikTokDbContext(optionsBuilder.Options);
         }
