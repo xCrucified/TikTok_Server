@@ -12,8 +12,8 @@ using data_access.data;
 namespace data_access.Migrations
 {
     [DbContext(typeof(TikTokDbContext))]
-    [Migration("20240717154604_HotFix")]
-    partial class HotFix
+    [Migration("20240719152304_connectionToServer")]
+    partial class connectionToServer
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -158,21 +158,6 @@ namespace data_access.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("SaveVideo", b =>
-                {
-                    b.Property<int>("SavesId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("VideosId")
-                        .HasColumnType("int");
-
-                    b.HasKey("SavesId", "VideosId");
-
-                    b.HasIndex("VideosId");
-
-                    b.ToTable("SaveVideo");
-                });
-
             modelBuilder.Entity("business_logic.Entities.Comment", b =>
                 {
                     b.Property<int>("Id")
@@ -269,9 +254,14 @@ namespace data_access.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<int>("VideoId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("UserId");
+
+                    b.HasIndex("VideoId");
 
                     b.ToTable("Saves", (string)null);
                 });
@@ -361,10 +351,10 @@ namespace data_access.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "e2c36d48-0057-42e1-8727-e578262f7e4e",
+                            Id = "61d2eeef-e0b9-48eb-b791-8cde62f13fa6",
                             AccessFailedCount = 0,
                             Balance = 99999m,
-                            ConcurrencyStamp = "04d096e5-6624-42ea-af13-5e9f0fa286b2",
+                            ConcurrencyStamp = "18029ce6-a73e-4c75-8db3-e5607b35da6c",
                             Description = "admin",
                             EmailConfirmed = false,
                             Followers = -1,
@@ -372,7 +362,7 @@ namespace data_access.Migrations
                             LockoutEnabled = false,
                             PhoneNumber = "123456789",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "7ad418ae-a98a-40d4-b623-e1470a669343",
+                            SecurityStamp = "3f05a65f-c0cc-4cea-a9a8-c75a6bfef0d1",
                             TwoFactorEnabled = false,
                             UserName = "admin"
                         });
@@ -465,21 +455,6 @@ namespace data_access.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("SaveVideo", b =>
-                {
-                    b.HasOne("business_logic.Entities.Save", null)
-                        .WithMany()
-                        .HasForeignKey("SavesId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("business_logic.Entities.Video", null)
-                        .WithMany()
-                        .HasForeignKey("VideosId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("business_logic.Entities.Comment", b =>
                 {
                     b.HasOne("business_logic.Entities.User", "User")
@@ -491,7 +466,7 @@ namespace data_access.Migrations
                     b.HasOne("business_logic.Entities.Video", "Video")
                         .WithMany("Comments")
                         .HasForeignKey("VideoId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("User");
@@ -510,7 +485,7 @@ namespace data_access.Migrations
                     b.HasOne("business_logic.Entities.Video", "Video")
                         .WithMany("Likes")
                         .HasForeignKey("VideoId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("User");
@@ -537,7 +512,15 @@ namespace data_access.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("business_logic.Entities.Video", "Video")
+                        .WithMany("Saves")
+                        .HasForeignKey("VideoId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
                     b.Navigation("User");
+
+                    b.Navigation("Video");
                 });
 
             modelBuilder.Entity("business_logic.Entities.Video", b =>
@@ -567,6 +550,8 @@ namespace data_access.Migrations
                     b.Navigation("Comments");
 
                     b.Navigation("Likes");
+
+                    b.Navigation("Saves");
                 });
 #pragma warning restore 612, 618
         }

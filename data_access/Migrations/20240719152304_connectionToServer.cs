@@ -5,7 +5,7 @@
 namespace data_access.Migrations
 {
     /// <inheritdoc />
-    public partial class HotFix : Migration
+    public partial class connectionToServer : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -13,12 +13,12 @@ namespace data_access.Migrations
             migrationBuilder.DeleteData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
-                keyValue: "ff604141-f3e9-428d-be50-f33e58fbfb7e");
+                keyValue: "9fac7041-45c6-4f06-836e-6cae7c2fde35");
 
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "AvatarPicture", "Balance", "Birthdate", "ConcurrencyStamp", "Description", "Email", "EmailConfirmed", "Followers", "Followings", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { "e2c36d48-0057-42e1-8727-e578262f7e4e", 0, null, 99999m, null, "04d096e5-6624-42ea-af13-5e9f0fa286b2", "admin", null, false, -1, 0, false, null, null, null, null, "123456789", false, "7ad418ae-a98a-40d4-b623-e1470a669343", false, "admin" });
+                values: new object[] { "61d2eeef-e0b9-48eb-b791-8cde62f13fa6", 0, null, 99999m, null, "18029ce6-a73e-4c75-8db3-e5607b35da6c", "admin", null, false, -1, 0, false, null, null, null, null, "123456789", false, "3f05a65f-c0cc-4cea-a9a8-c75a6bfef0d1", false, "admin" });
         }
 
         /// <inheritdoc />
@@ -27,12 +27,12 @@ namespace data_access.Migrations
             migrationBuilder.DeleteData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
-                keyValue: "e2c36d48-0057-42e1-8727-e578262f7e4e");
+                keyValue: "61d2eeef-e0b9-48eb-b791-8cde62f13fa6");
 
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "AvatarPicture", "Balance", "Birthdate", "ConcurrencyStamp", "Description", "Email", "EmailConfirmed", "Followers", "Followings", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { "ff604141-f3e9-428d-be50-f33e58fbfb7e", 0, null, 99999m, null, "5711c05e-9521-4e6d-be1f-8093dd892d69", "admin", null, false, -1, 0, false, null, null, null, null, "123456789", false, "a25863c6-9b78-4bcf-87fe-f7913d4f23e2", false, "admin" });
+                values: new object[] { "9fac7041-45c6-4f06-836e-6cae7c2fde35", 0, null, 99999m, null, "af76ae9c-c33e-4e64-bf0d-ad3f5490dd89", "admin", null, false, -1, 0, false, null, null, null, null, "123456789", false, "6cdde469-aa1e-4302-8f9a-cf64a84af890", false, "admin" });
         }
     }
 }

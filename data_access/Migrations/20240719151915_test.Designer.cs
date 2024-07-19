@@ -12,7 +12,7 @@ using data_access.data;
 namespace data_access.Migrations
 {
     [DbContext(typeof(TikTokDbContext))]
-    [Migration("20240719132920_test")]
+    [Migration("20240719151915_test")]
     partial class test
     {
         /// <inheritdoc />
@@ -351,10 +351,10 @@ namespace data_access.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "1d3879cb-4cc9-440a-a881-74afce1e8b3d",
+                            Id = "9fac7041-45c6-4f06-836e-6cae7c2fde35",
                             AccessFailedCount = 0,
                             Balance = 99999m,
-                            ConcurrencyStamp = "b0fab207-1f23-432c-8aee-dbd0c4c7a6ca",
+                            ConcurrencyStamp = "af76ae9c-c33e-4e64-bf0d-ad3f5490dd89",
                             Description = "admin",
                             EmailConfirmed = false,
                             Followers = -1,
@@ -362,7 +362,7 @@ namespace data_access.Migrations
                             LockoutEnabled = false,
                             PhoneNumber = "123456789",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "371134d9-f9d9-440c-920f-3cc8e0a55fe4",
+                            SecurityStamp = "6cdde469-aa1e-4302-8f9a-cf64a84af890",
                             TwoFactorEnabled = false,
                             UserName = "admin"
                         });
@@ -466,7 +466,7 @@ namespace data_access.Migrations
                     b.HasOne("business_logic.Entities.Video", "Video")
                         .WithMany("Comments")
                         .HasForeignKey("VideoId")
-                        .OnDelete(DeleteBehavior.ClientCascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("User");
@@ -485,7 +485,7 @@ namespace data_access.Migrations
                     b.HasOne("business_logic.Entities.Video", "Video")
                         .WithMany("Likes")
                         .HasForeignKey("VideoId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("User");
@@ -515,7 +515,7 @@ namespace data_access.Migrations
                     b.HasOne("business_logic.Entities.Video", "Video")
                         .WithMany("Saves")
                         .HasForeignKey("VideoId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("User");

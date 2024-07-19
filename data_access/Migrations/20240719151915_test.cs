@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace data_access.Migrations
 {
     /// <inheritdoc />
-    public partial class Init : Migration
+    public partial class test : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -184,26 +184,6 @@ namespace data_access.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Saves",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    DateSave = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Saves", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Saves_AspNetUsers_UserId",
-                        column: x => x.UserId,
-                        principalTable: "AspNetUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Videos",
                 columns: table => new
                 {
@@ -250,8 +230,7 @@ namespace data_access.Migrations
                         name: "FK_Comment_Videos_VideoId",
                         column: x => x.VideoId,
                         principalTable: "Videos",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -277,38 +256,39 @@ namespace data_access.Migrations
                         name: "FK_Likes_Videos_VideoId",
                         column: x => x.VideoId,
                         principalTable: "Videos",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
-                name: "SaveVideo",
+                name: "Saves",
                 columns: table => new
                 {
-                    SavesId = table.Column<int>(type: "int", nullable: false),
-                    VideosId = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    DateSave = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    VideoId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_SaveVideo", x => new { x.SavesId, x.VideosId });
+                    table.PrimaryKey("PK_Saves", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_SaveVideo_Saves_SavesId",
-                        column: x => x.SavesId,
-                        principalTable: "Saves",
+                        name: "FK_Saves_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_SaveVideo_Videos_VideosId",
-                        column: x => x.VideosId,
+                        name: "FK_Saves_Videos_VideoId",
+                        column: x => x.VideoId,
                         principalTable: "Videos",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "AvatarPicture", "Balance", "Birthdate", "ConcurrencyStamp", "Description", "Email", "EmailConfirmed", "Followers", "Followings", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { "ff604141-f3e9-428d-be50-f33e58fbfb7e", 0, null, 99999m, null, "5711c05e-9521-4e6d-be1f-8093dd892d69", "admin", null, false, -1, 0, false, null, null, null, null, "123456789", false, "a25863c6-9b78-4bcf-87fe-f7913d4f23e2", false, "admin" });
+                values: new object[] { "9fac7041-45c6-4f06-836e-6cae7c2fde35", 0, null, 99999m, null, "af76ae9c-c33e-4e64-bf0d-ad3f5490dd89", "admin", null, false, -1, 0, false, null, null, null, null, "123456789", false, "6cdde469-aa1e-4302-8f9a-cf64a84af890", false, "admin" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
@@ -380,9 +360,9 @@ namespace data_access.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_SaveVideo_VideosId",
-                table: "SaveVideo",
-                column: "VideosId");
+                name: "IX_Saves_VideoId",
+                table: "Saves",
+                column: "VideoId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Videos_UserId",
@@ -418,13 +398,10 @@ namespace data_access.Migrations
                 name: "RefreshTokens");
 
             migrationBuilder.DropTable(
-                name: "SaveVideo");
+                name: "Saves");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
-
-            migrationBuilder.DropTable(
-                name: "Saves");
 
             migrationBuilder.DropTable(
                 name: "Videos");
