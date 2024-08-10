@@ -6,7 +6,7 @@ using TikTok_Server.Helpers;
 using business_logic.Profiles;
 
 var builder = WebApplication.CreateBuilder(args);
-var connStr = builder.Configuration.GetConnectionString("TikTokDb")!;
+var connStr = builder.Configuration.GetConnectionString("SomeeDb")!;
 
 // Add services to the container.
 
